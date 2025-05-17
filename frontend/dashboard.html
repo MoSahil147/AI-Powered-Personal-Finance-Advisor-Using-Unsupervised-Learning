@@ -1,0 +1,33 @@
+<!-- frontend/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartSave AI – Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SmartSave AI – Results</h1>
+
+  <section id="summary">
+    <h2>Spending Summary</h2>
+    <p><strong>Cluster ID:</strong> <span id="cluster"></span></p>
+    <p><strong>Saving Rate:</strong> <span id="saving-rate"></span>%</p>
+  </section>
+
+  <section id="tips">
+    <h2>Personalized Tips</h2>
+    <ul id="tips-list"></ul>
+  </section>
+
+  <section id="charts">
+    <h2>Spending Breakdown</h2>
+    <canvas id="pieChart" width="400" height="300"></canvas>
+    <canvas id="lineChart" width="400" height="300"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>
