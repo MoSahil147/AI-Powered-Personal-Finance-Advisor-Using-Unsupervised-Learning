@@ -14,6 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
       Others: parseFloat(document.getElementById("others").value) || 0
     };
 
+    // Calculate total expenses
+    const totalExpenses = Object.values(expenses).reduce((sum, expense) => sum + expense, 0);
+    
+    // Check if total expenses exceed income
+    if (totalExpenses > income) {
+      alert("Error: Your total expenses exceed your income. Please review your entries and try again.");
+      return; // Stop form submission
+    }
+
     const payload = { income, expenses };
 
     try {
