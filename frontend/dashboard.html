@@ -1,31 +1,64 @@
-<!-- frontend/dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartSave AI – Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>SmartSave AI – Results</h1>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-piggy-bank"></i> SmartSave AI</h1>
+      <p>Financial Analysis Dashboard</p>
+    </div>
 
-  <section id="summary">
-    <h2>Spending Summary</h2>
-    <p><strong>Cluster ID:</strong> <span id="cluster"></span></p>
-    <p><strong>Saving Rate:</strong> <span id="saving-rate"></span>%</p>
-  </section>
+    <div class="summary-stats">
+      <div class="stat-card">
+        <h3><i class="fas fa-chart-pie"></i> Your Financial Group</h3>
+        <div class="stat-value" id="cluster-display">-</div>
+        <p id="cluster-description">Loading your financial profile...</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3><i class="fas fa-coins"></i> Saving Rate</h3>
+        <div class="stat-value"><span id="saving-rate">-</span>%</div>
+        <p>Of your income</p>
+      </div>
+      
+      <div class="stat-card">
+        <h3><i class="fas fa-balance-scale"></i> Financial Health</h3>
+        <div class="stat-value" id="health-score">-</div>
+        <p id="health-description">Based on spending patterns</p>
+      </div>
+    </div>
 
-  <section id="tips">
-    <h2>Personalized Tips</h2>
-    <ul id="tips-list"></ul>
-  </section>
+    <div class="card">
+      <h2><i class="fas fa-lightbulb"></i> Personalized Financial Tips</h2>
+      <div id="tips-container">
+        <!-- Tips will be inserted here by JS -->
+      </div>
+    </div>
 
-  <section id="charts">
-    <h2>Spending Breakdown</h2>
-    <canvas id="pieChart" width="400" height="300"></canvas>
-    <canvas id="lineChart" width="400" height="300"></canvas>
-  </section>
+    <div class="charts-container">
+      <div class="chart-card">
+        <h3><i class="fas fa-chart-pie"></i> Expense Breakdown</h3>
+        <canvas id="pieChart" width="400" height="300"></canvas>
+      </div>
+      
+      <div class="chart-card">
+        <h3><i class="fas fa-chart-line"></i> Spending Categories</h3>
+        <canvas id="lineChart" width="400" height="300"></canvas>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="btn">
+        <i class="fas fa-arrow-left"></i> Enter New Data
+      </a>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="charts.js"></script>

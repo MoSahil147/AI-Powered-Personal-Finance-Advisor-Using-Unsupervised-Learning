@@ -2,26 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SmartSave AI – Input</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSave AI – Personal Finance Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>SmartSave AI</h1>
-  <form id="finance-form">
-    <label>Income:
-      <input type="number" id="income" required />
-    </label>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-piggy-bank"></i> SmartSave AI</h1>
+      <p>Your AI-Powered Personal Finance Advisor</p>
+    </div>
 
-    <h3>Enter Expenses</h3>
-    <label>Food: <input type="number" id="food" /></label>
-    <label>Travel: <input type="number" id="travel" /></label>
-    <label>Shopping: <input type="number" id="shopping" /></label>
-    <label>Bills: <input type="number" id="bills" /></label>
-    <label>Subscriptions: <input type="number" id="subscriptions" /></label>
-    <label>Others: <input type="number" id="others" /></label>
+    <div class="card">
+      <h2>Enter Your Financial Details</h2>
+      <form id="finance-form">
+        <div class="form-group">
+          <label for="income"><i class="fas fa-money-bill-wave"></i> Monthly Income:</label>
+          <input type="number" id="income" class="form-control" required placeholder="Enter your total monthly income">
+        </div>
 
-    <button type="submit">Analyze</button>
-  </form>
+        <h3 style="margin: 30px 0 20px; text-align: center;">Monthly Expenses</h3>
+        
+        <div class="form-group">
+          <label for="food"><i class="fas fa-utensils"></i> Food & Groceries:</label>
+          <input type="number" id="food" class="form-control" placeholder="0">
+        </div>
+        
+        <div class="form-group">
+          <label for="travel"><i class="fas fa-bus"></i> Transportation:</label>
+          <input type="number" id="travel" class="form-control" placeholder="0">
+        </div>
+        
+        <div class="form-group">
+          <label for="shopping"><i class="fas fa-shopping-cart"></i> Shopping:</label>
+          <input type="number" id="shopping" class="form-control" placeholder="0">
+        </div>
+        
+        <div class="form-group">
+          <label for="bills"><i class="fas fa-file-invoice"></i> Bills & Utilities:</label>
+          <input type="number" id="bills" class="form-control" placeholder="0">
+        </div>
+        
+        <div class="form-group">
+          <label for="subscriptions"><i class="fas fa-tv"></i> Subscriptions:</label>
+          <input type="number" id="subscriptions" class="form-control" placeholder="0">
+        </div>
+        
+        <div class="form-group">
+          <label for="others"><i class="fas fa-ellipsis-h"></i> Others:</label>
+          <input type="number" id="others" class="form-control" placeholder="0">
+        </div>
+
+        <button type="submit" class="btn btn-block btn-large">
+          <i class="fas fa-chart-line"></i> Analyze My Finances
+        </button>
+      </form>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666;">
+      <p>SmartSave AI uses machine learning to analyze your spending patterns and provide personalized financial advice.</p>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

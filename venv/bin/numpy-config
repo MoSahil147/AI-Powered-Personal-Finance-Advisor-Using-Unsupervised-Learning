@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/sahil/Desktop/AI compre project/venv/bin/python3.11" "$0" "$@"
+'''exec' "/Users/devanshmittal/Desktop/ai project/AI-Powered-Personal-Finance-Advisor-Using-Unsupervised-Learning/venv/bin/python3.13" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
